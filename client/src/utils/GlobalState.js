@@ -27,10 +27,12 @@ const StoreProvider = ({ value = [], ...props }) => {
     // provider flexible.The other prop, or rather ...props, is in place to handle any 
     // other props the user may need. 
     const [state, dispatch] = useProductReducer({
-      products: [],
-      categories: [],
-      currentCategory: '',
-    });
+        products: [],
+        cart: [],
+        cartOpen: false,
+        categories: [],
+        currentCategory: ''
+      });
     // use this to confirm it works!
     console.log(state);
     //Because that wraps it around the useReducer() Hook from React, every time we run

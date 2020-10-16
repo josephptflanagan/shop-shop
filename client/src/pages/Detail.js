@@ -56,7 +56,7 @@ function Detail() {
       type: REMOVE_FROM_CART,
       _id: currentProduct._id
     });
-  
+
     // upon removal from cart, delete the item from IndexedDB using the `currentProduct._id` to locate what to remove
     idbPromise('cart', 'delete', { ...currentProduct });
   };
@@ -114,7 +114,7 @@ function Detail() {
               onClick={removeFromCart}
             >
               Remove from Cart
-</button>
+            </button>
           </p>
 
           <img
